@@ -45,16 +45,16 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
-<meta name="description" content="很早之前就听到别人有自己的博客，当时就">
+<meta name="description" content="前言很早之前就听说别人有自己的博客，当时就 感觉个人博客这">
 <meta property="og:type" content="article">
 <meta property="og:title" content="开始我的个人博客">
 <meta property="og:url" content="http://rancholee.github.io/2016/07/31/my-article/index.html">
 <meta property="og:site_name" content="Rancho's Blog">
-<meta property="og:description" content="很早之前就听到别人有自己的博客，当时就">
-<meta property="og:updated_time" content="2016-07-31T12:16:13.151Z">
+<meta property="og:description" content="前言很早之前就听说别人有自己的博客，当时就 感觉个人博客这">
+<meta property="og:updated_time" content="2016-08-02T03:27:07.139Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="开始我的个人博客">
-<meta name="twitter:description" content="很早之前就听到别人有自己的博客，当时就">
+<meta name="twitter:description" content="前言很早之前就听说别人有自己的博客，当时就 感觉个人博客这">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -169,6 +169,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-question-circle"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
 
       
       
@@ -249,7 +259,7 @@
           
            &nbsp; | &nbsp;
          <span id="/2016/07/31/my-article/"class="leancloud_visitors" data-flag-title="开始我的个人博客">
-         &nbsp;阅读次数
+         &nbsp;热度
          </span>
          
 
@@ -264,7 +274,8 @@
       
 
       
-        <span itemprop="articleBody"><p>很早之前就听到别人有自己的博客，当时就 <a id="more"></a>,感觉个人   博客这种东西好高大上啊，要是有一个自己的博客多好啊！然后这个暑假在家里无所事事，于是就搜索建站的教程，开始自己的建站之旅。</p>
+        <span itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>很早之前就听说别人有自己的博客，当时就 感觉个人博客这<a id="more"></a>种东西好高大上啊，要是有一个自己的博客多好啊！然后这个暑假在家里无所事事，于是就搜索建站的教程，开始自己的建站之旅。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>其实搭建个人博客并没有想象中那么难，不过过程也比较繁琐。需要下载好几款软件、注册好几个账号、添加插件等等。不过网上都有详细教程，只要跟着做，很容易就做好了。</p>
 </span>
       
     </div>
@@ -387,6 +398,20 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="http://github.com/rancholee" target="_blank">
+                  <i class="fa fa-github"></i> Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/3304817135" target="_blank">
+                  <i class="fa fa-微博"></i> 微博
+                </a>
+              </span>
+            
+          
         </div>
 
         
@@ -394,7 +419,7 @@
 
         <div class="links-of-author motion-element">
           
-            <p class="site-author-name"></p>
+            <p class="site-author-name">友情链接</p>
             
               <span class="links-of-author-item">
                 <a href="http://rancholee.github.io/" target="_blank">rancho</a>
@@ -411,7 +436,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -451,7 +476,7 @@
 
 
 <span id="busuanzi_container_site_uv">
-  &nbsp;&nbsp;&nbsp|  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+  &nbsp;&nbsp;&nbsp|  本站访客数<span id="busuanzi_value_site_uv"></span>人
 </span>
 <span id="busuanzi_container_site_pv">
     |  本站总访问量<span id="busuanzi_value_site_pv"></span>次|&nbsp;</span>
@@ -719,10 +744,10 @@
       query.containedIn('url', entries);
       query.find()
         .done(function (results) {
-         var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
 
           if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            $visitors.find(COUNT_CONTAINER_REF).text(0+"°C");
             return;
           }
 
@@ -732,7 +757,15 @@
             var time = item.get('time');
             var element = document.getElementById(url);
 
-            $(element).find(COUNT_CONTAINER_REF).text(time);
+            $(element).find(COUNT_CONTAINER_REF).text(time+"°C");
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0+"°C");
+            }
           }
         })
         .fail(function (object, error) {
@@ -750,15 +783,14 @@
       query.find({
         success: function(results) {
           if (results.length > 0) {
-
             var counter = results[0];
             counter.fetchWhenSave(true);
             counter.increment("time");
             counter.save(null, {
               success: function(counter) {
                 var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-       },
+                $element.find('.leancloud-visitors-count').text(counter.get('time')+"°C");
+              },
               error: function(counter, error) {
                 console.log('Failed to save Visitor num, with error message: ' + error.message);
               }
@@ -777,10 +809,10 @@
             newcounter.save(null, {
               success: function(newcounter) {
                 var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time')+"°C");
               },
               error: function(newcounter, error) {
-               console.log('Failed to create');
+                console.log('Failed to create');
               }
             });
           }
@@ -802,10 +834,9 @@
   </script>
 
 
-
   
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260049025'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260049025%26online%3D2' type='text/javascript'%3E%3C/script%3E"));</script>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260049025'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260049025%26online%3D2' type='text/javascript'%3E%3C/script%3E"));</script>
 
 </body>
 </html>
